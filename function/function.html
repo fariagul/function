@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function gpa() {
+            var name= prompt("write your name");
+       var m101=prompt("write you Grade point in english");
+       var m102 = prompt("write your Grade point in pf");
+       var m103 = prompt("write your Grade point in itc");
+       var m104 = prompt("write your Grade point in physics");
+       var m105 = prompt("write your Grade point in communication skill");
+       var qp = m101*3 +m102*3+ m103*3+ m104*2 +m105*3;
+       var cu =3+3+3+2+3;
+       var gpa=qp/cu;
+      document.write("<h1> HI! "+name);
+
+       if(gpa >= 4){
+        document.write("<h1>YOUR GPA IS 4 <\h1>")
+        document.write("<h1>Grade A<\h1>");
+       }
+       else if((gpa<=4 )&& (gpa>3.5)){
+        var a=gpa.toFixed(1);
+        document.write("<h1>YOUR GPA IS <\h1>"+a)
+        document.write("<h1>Grade B<\h1>");
+       }
+       else if((gpa<=3.5)&& (gpa>3)){
+        var a=gpa.toFixed(1);
+        document.write("<h1>YOUR GPA IS <\h1>"+a)
+        document.write("<h1>Grade C<\h1>");
+       }
+
+       
+       else if((gpa<=3 )&& (gpa>2.5)){
+        var a=gpa.toFixed(1);
+        document.write("<h1>YOUR GPA IS <\h1>"+a)
+        document.write("<h1>Grade D<\h1>");
+       }
+       else if((gpa<=2.5)&& (gpa>2)){
+        var a=gpa.toFixed(1);
+        document.write("<h1>YOUR GPA IS <\h1>"+a)
+        document.write("<h1>Grade E<\h1>");
+       }
+       else{
+        document.write("you fail");
+       }
+
+        }
+        function even() {
+            var num=prompt("enter any number you want");
+        if(num%2==0){
+            document.write("this number is even");
+        }
+        else{
+            document.write("the number you enter is odd number");
+        }
+        }
+        function prime(){
+            var mod;
+    var a=prompt("enter number you want to check")
+  if(a>1){
+    for (var index = 2; index <a; index++) {
+        mod=a%index;
+        if(mod==0){
+            document.write("NOT PRIME NUMBER");
+            break;
+        }
+        else{
+            document.write("THIS IS PRIME NUMBER");
+        }
+        
+    }
+  }
+        }
+        function fruit() {
+              // Define the list of fruits and their prices
+const fruitPrices = {
+  apple: 2.0,
+  orange: 1.5,
+  banana: 1.0,
+  grape: 3.0,
+  mango: 2.5,
+};
+
+// Define the available budget
+const budget = 50.0;
+
+// Initialize variables
+let fruitList = ['apple', 'orange', 'banana', 'grape', 'mango'];
+let totalCost = 0.0;
+
+// Function to calculate the price of an individual fruit using switch case
+function getFruitPrice(fruit) {
+  switch (fruit) {
+    case 'apple':
+      return 2.0;
+    case 'orange':
+      return 1.5;
+    case 'banana':
+      return 1.0;
+    case 'grape':
+      return 3.0;
+    case 'mango':
+      return 2.5;
+    default:
+      return 0.0;
+  }
+}
+
+// Calculate the total cost with discounts
+for (let i = 0; i < fruitList.length; i++) {
+  const fruit = fruitList[i];
+  const price = getFruitPrice(fruit);
+
+  // Apply discounts for apples and bananas
+  if (fruit === 'apple') {
+    totalCost += 0.9 * price; // 10% discount for apples
+  } else if (fruit === 'banana') {
+    totalCost += 0.8 * price; // 20% discount for bananas
+  } else {
+    totalCost += price;
+  }
+}
+
+// Make the final decision
+if (totalCost <= budget) {
+  document.write('You can buy these fruits within your budget.');
+  document.write('Fruits to buy:', fruitList.join(', '));
+  document.write('Total cost: $' + totalCost.toFixed(2));
+} else {
+  document.write('You cannot buy the fruits within your budget.');
+}
+            
+        }
+        
+    </script>
+</body>
+</html>
